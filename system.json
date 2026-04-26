@@ -1,0 +1,597 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a060)",
+  "modules": {
+    "adder_3bit": {
+      "attributes": {
+        "src": "src/adder_3bit.v:1.1-15.10"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2, 3, 4 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 5, 6, 7 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 8 ]
+        },
+        "sum": {
+          "direction": "output",
+          "bits": [ 9, 10, 11 ]
+        },
+        "cout": {
+          "direction": "output",
+          "bits": [ 12 ]
+        }
+      },
+      "cells": {
+        "fa0": {
+          "hide_name": 0,
+          "type": "full_adder",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "src/adder_3bit.v:11.12-11.44"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sum": "output"
+          },
+          "connections": {
+            "a": [ 2 ],
+            "b": [ 5 ],
+            "cin": [ 8 ],
+            "cout": [ 13 ],
+            "sum": [ 9 ]
+          }
+        },
+        "fa1": {
+          "hide_name": 0,
+          "type": "full_adder",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "src/adder_3bit.v:12.12-12.43"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sum": "output"
+          },
+          "connections": {
+            "a": [ 3 ],
+            "b": [ 6 ],
+            "cin": [ 13 ],
+            "cout": [ 14 ],
+            "sum": [ 10 ]
+          }
+        },
+        "fa2": {
+          "hide_name": 0,
+          "type": "full_adder",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "src/adder_3bit.v:13.12-13.45"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sum": "output"
+          },
+          "connections": {
+            "a": [ 4 ],
+            "b": [ 7 ],
+            "cin": [ 14 ],
+            "cout": [ 12 ],
+            "sum": [ 11 ]
+          }
+        }
+      },
+      "netnames": {
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4 ],
+          "attributes": {
+            "src": "src/adder_3bit.v:2.17-2.18"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7 ],
+          "attributes": {
+            "src": "src/adder_3bit.v:3.17-3.18"
+          }
+        },
+        "c1": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "src/adder_3bit.v:9.6-9.8"
+          }
+        },
+        "c2": {
+          "hide_name": 0,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "src/adder_3bit.v:9.10-9.12"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "src/adder_3bit.v:4.11-4.14"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "src/adder_3bit.v:6.12-6.16"
+          }
+        },
+        "sum": {
+          "hide_name": 0,
+          "bits": [ 9, 10, 11 ],
+          "attributes": {
+            "src": "src/adder_3bit.v:5.18-5.21"
+          }
+        }
+      }
+    },
+    "full_adder": {
+      "attributes": {
+        "src": "src/full-adder.v:1.1-9.10"
+      },
+      "ports": {
+        "a": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "b": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "cin": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "sum": {
+          "direction": "output",
+          "bits": [ 5 ]
+        },
+        "cout": {
+          "direction": "output",
+          "bits": [ 6 ]
+        }
+      },
+      "cells": {
+        "$and$src/full-adder.v:7$3": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "src/full-adder.v:7.16-7.21"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 7 ]
+          }
+        },
+        "$and$src/full-adder.v:7$5": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "src/full-adder.v:7.26-7.39"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 4 ],
+            "B": [ 8 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$or$src/full-adder.v:7$6": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "src/full-adder.v:7.15-7.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 9 ],
+            "Y": [ 6 ]
+          }
+        },
+        "$xor$src/full-adder.v:6$1": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "src/full-adder.v:6.14-6.19"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 3 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$xor$src/full-adder.v:6$2": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "src/full-adder.v:6.14-6.25"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 4 ],
+            "Y": [ 5 ]
+          }
+        }
+      },
+      "netnames": {
+        "$and$src/full-adder.v:7$3_Y": {
+          "hide_name": 1,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "src/full-adder.v:7.16-7.21"
+          }
+        },
+        "$and$src/full-adder.v:7$5_Y": {
+          "hide_name": 1,
+          "bits": [ 9 ],
+          "attributes": {
+            "src": "src/full-adder.v:7.26-7.39"
+          }
+        },
+        "$xor$src/full-adder.v:6$1_Y": {
+          "hide_name": 1,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "src/full-adder.v:6.14-6.19"
+          }
+        },
+        "a": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "src/full-adder.v:2.11-2.12"
+          }
+        },
+        "b": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "src/full-adder.v:2.14-2.15"
+          }
+        },
+        "cin": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "src/full-adder.v:2.17-2.20"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "src": "src/full-adder.v:3.17-3.21"
+          }
+        },
+        "sum": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "src/full-adder.v:3.12-3.15"
+          }
+        }
+      }
+    },
+    "register_3bit": {
+      "attributes": {
+        "src": "src/register_3bit.v:1.1-15.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "d": {
+          "direction": "input",
+          "bits": [ 4, 5, 6 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 7, 8, 9 ]
+        }
+      },
+      "cells": {
+        "$procdff$10": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "1",
+            "ARST_VALUE": "000",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "src/register_3bit.v:8.1-13.4"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 3 ],
+            "CLK": [ 2 ],
+            "D": [ 4, 5, 6 ],
+            "Q": [ 7, 8, 9 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "src/register_3bit.v:2.11-2.14"
+          }
+        },
+        "d": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6 ],
+          "attributes": {
+            "src": "src/register_3bit.v:4.17-4.18"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 7, 8, 9 ],
+          "attributes": {
+            "src": "src/register_3bit.v:5.22-5.23"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "src/register_3bit.v:3.11-3.16"
+          }
+        }
+      }
+    },
+    "system": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "src/system.v:1.1-35.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "up_down": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 5, 6, 7 ]
+        }
+      },
+      "cells": {
+        "$ternary$src/system.v:14$9": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "src/system.v:14.18-14.50"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "0", "0" ],
+            "B": [ "1", "1", "1" ],
+            "S": [ 4 ],
+            "Y": [ 8, 9, 10 ]
+          }
+        },
+        "adder": {
+          "hide_name": 0,
+          "type": "adder_3bit",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "src/system.v:17.12-23.2"
+          },
+          "port_directions": {
+            "a": "input",
+            "b": "input",
+            "cin": "input",
+            "cout": "output",
+            "sum": "output"
+          },
+          "connections": {
+            "a": [ 5, 6, 7 ],
+            "b": [ 8, 9, 10 ],
+            "cin": [ "0" ],
+            "cout": [ 11 ],
+            "sum": [ 12, 13, 14 ]
+          }
+        },
+        "reg1": {
+          "hide_name": 0,
+          "type": "register_3bit",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "src/system.v:26.15-31.2"
+          },
+          "port_directions": {
+            "clk": "input",
+            "d": "input",
+            "q": "output",
+            "reset": "input"
+          },
+          "connections": {
+            "clk": [ 2 ],
+            "d": [ 12, 13, 14 ],
+            "q": [ 5, 6, 7 ],
+            "reset": [ 3 ]
+          }
+        }
+      },
+      "netnames": {
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "src/system.v:2.11-2.14"
+          }
+        },
+        "cout": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "src/system.v:11.6-11.10",
+            "unused_bits": "0 "
+          }
+        },
+        "current": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7 ],
+          "attributes": {
+            "src": "src/system.v:8.12-8.19"
+          }
+        },
+        "next": {
+          "hide_name": 0,
+          "bits": [ 12, 13, 14 ],
+          "attributes": {
+            "src": "src/system.v:9.12-9.16"
+          }
+        },
+        "operand": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10 ],
+          "attributes": {
+            "src": "src/system.v:10.12-10.19"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7 ],
+          "attributes": {
+            "src": "src/system.v:5.18-5.19"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "src/system.v:3.11-3.16"
+          }
+        },
+        "up_down": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "src/system.v:4.11-4.18"
+          }
+        }
+      }
+    }
+  }
+}

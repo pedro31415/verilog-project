@@ -1,0 +1,514 @@
+{
+  "creator": "Yosys 0.33 (git sha1 2584903a060)",
+  "modules": {
+    "system": {
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "src/system.v:1.1-35.10"
+      },
+      "ports": {
+        "clk": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "reset": {
+          "direction": "input",
+          "bits": [ 3 ]
+        },
+        "up_down": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "q": {
+          "direction": "output",
+          "bits": [ 5, 6, 7 ]
+        }
+      },
+      "cells": {
+        "$auto$ff.cc:266:slice$100": {
+          "hide_name": 1,
+          "type": "$_DFF_PP0_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:26.15-31.2|src/register_3bit.v:8.1-13.4"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 8 ],
+            "Q": [ 5 ],
+            "R": [ 3 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$101": {
+          "hide_name": 1,
+          "type": "$_DFF_PP0_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:26.15-31.2|src/register_3bit.v:8.1-13.4"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 9 ],
+            "Q": [ 6 ],
+            "R": [ 3 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$102": {
+          "hide_name": 1,
+          "type": "$_DFF_PP0_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:26.15-31.2|src/register_3bit.v:8.1-13.4"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output",
+            "R": "input"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 10 ],
+            "Q": [ 7 ],
+            "R": [ 3 ]
+          }
+        },
+        "$auto$opt_expr.cc:607:replace_const_cells$103": {
+          "hide_name": 1,
+          "type": "$_NOT_",
+          "parameters": {
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$auto$simplemap.cc:75:simplemap_bitop$91": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:6.14-6.25|src/adder_3bit.v:13.12-13.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "B": [ 12 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$auto$simplemap.cc:75:simplemap_bitop$92": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:6.14-6.25|src/adder_3bit.v:12.12-12.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 5 ],
+            "Y": [ 9 ]
+          }
+        },
+        "$auto$simplemap.cc:75:simplemap_bitop$93": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:7.16-7.21|src/adder_3bit.v:12.12-12.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 4 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$auto$simplemap.cc:75:simplemap_bitop$94": {
+          "hide_name": 1,
+          "type": "$_AND_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:7.26-7.39|src/adder_3bit.v:12.12-12.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 5 ],
+            "B": [ 13 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$auto$simplemap.cc:75:simplemap_bitop$95": {
+          "hide_name": 1,
+          "type": "$_OR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:7.15-7.40|src/adder_3bit.v:12.12-12.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 14 ],
+            "B": [ 15 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$auto$simplemap.cc:75:simplemap_bitop$98": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:6.14-6.19|src/adder_3bit.v:13.12-13.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 7 ],
+            "B": [ 4 ],
+            "Y": [ 11 ]
+          }
+        },
+        "$auto$simplemap.cc:75:simplemap_bitop$99": {
+          "hide_name": 1,
+          "type": "$_XOR_",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:6.14-6.19|src/adder_3bit.v:12.12-12.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 6 ],
+            "B": [ 4 ],
+            "Y": [ 13 ]
+          }
+        }
+      },
+      "netnames": {
+        "$flatten\\adder.\\fa1.$and$src/full-adder.v:7$3_Y": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:7.16-7.21|src/adder_3bit.v:12.12-12.43"
+          }
+        },
+        "$flatten\\adder.\\fa1.$and$src/full-adder.v:7$5_Y": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:7.26-7.39|src/adder_3bit.v:12.12-12.43"
+          }
+        },
+        "$flatten\\adder.\\fa1.$xor$src/full-adder.v:6$1_Y": {
+          "hide_name": 1,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:6.14-6.19|src/adder_3bit.v:12.12-12.43"
+          }
+        },
+        "$flatten\\adder.\\fa2.$xor$src/full-adder.v:6$1_Y": {
+          "hide_name": 1,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:6.14-6.19|src/adder_3bit.v:13.12-13.45"
+          }
+        },
+        "adder.a": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7 ],
+          "attributes": {
+            "hdlname": "adder a",
+            "src": "src/system.v:17.12-23.2|src/adder_3bit.v:2.17-2.18"
+          }
+        },
+        "adder.b": {
+          "hide_name": 0,
+          "bits": [ "1", 4, 4 ],
+          "attributes": {
+            "hdlname": "adder b",
+            "src": "src/system.v:17.12-23.2|src/adder_3bit.v:3.17-3.18"
+          }
+        },
+        "adder.c1": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "adder c1",
+            "src": "src/system.v:17.12-23.2|src/adder_3bit.v:9.6-9.8"
+          }
+        },
+        "adder.c2": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "hdlname": "adder c2",
+            "src": "src/system.v:17.12-23.2|src/adder_3bit.v:9.10-9.12"
+          }
+        },
+        "adder.cin": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "adder cin",
+            "src": "src/system.v:17.12-23.2|src/adder_3bit.v:4.11-4.14"
+          }
+        },
+        "adder.fa0.a": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "adder fa0 a",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:2.11-2.12|src/adder_3bit.v:11.12-11.44"
+          }
+        },
+        "adder.fa0.b": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "hdlname": "adder fa0 b",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:2.14-2.15|src/adder_3bit.v:11.12-11.44"
+          }
+        },
+        "adder.fa0.cin": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "adder fa0 cin",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:2.17-2.20|src/adder_3bit.v:11.12-11.44"
+          }
+        },
+        "adder.fa0.cout": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "adder fa0 cout",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:3.17-3.21|src/adder_3bit.v:11.12-11.44"
+          }
+        },
+        "adder.fa0.sum": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "hdlname": "adder fa0 sum",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:3.12-3.15|src/adder_3bit.v:11.12-11.44"
+          }
+        },
+        "adder.fa1.a": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "hdlname": "adder fa1 a",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:2.11-2.12|src/adder_3bit.v:12.12-12.43"
+          }
+        },
+        "adder.fa1.b": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "hdlname": "adder fa1 b",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:2.14-2.15|src/adder_3bit.v:12.12-12.43"
+          }
+        },
+        "adder.fa1.cin": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "hdlname": "adder fa1 cin",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:2.17-2.20|src/adder_3bit.v:12.12-12.43"
+          }
+        },
+        "adder.fa1.cout": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "hdlname": "adder fa1 cout",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:3.17-3.21|src/adder_3bit.v:12.12-12.43"
+          }
+        },
+        "adder.fa1.sum": {
+          "hide_name": 0,
+          "bits": [ 9 ],
+          "attributes": {
+            "hdlname": "adder fa1 sum",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:3.12-3.15|src/adder_3bit.v:12.12-12.43"
+          }
+        },
+        "adder.fa2.a": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "hdlname": "adder fa2 a",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:2.11-2.12|src/adder_3bit.v:13.12-13.45"
+          }
+        },
+        "adder.fa2.b": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "hdlname": "adder fa2 b",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:2.14-2.15|src/adder_3bit.v:13.12-13.45"
+          }
+        },
+        "adder.fa2.cin": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "hdlname": "adder fa2 cin",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:2.17-2.20|src/adder_3bit.v:13.12-13.45"
+          }
+        },
+        "adder.fa2.sum": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+            "hdlname": "adder fa2 sum",
+            "src": "src/system.v:17.12-23.2|src/full-adder.v:3.12-3.15|src/adder_3bit.v:13.12-13.45"
+          }
+        },
+        "adder.sum": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10 ],
+          "attributes": {
+            "hdlname": "adder sum",
+            "src": "src/system.v:17.12-23.2|src/adder_3bit.v:5.18-5.21"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "src/system.v:2.11-2.14"
+          }
+        },
+        "current": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7 ],
+          "attributes": {
+            "src": "src/system.v:8.12-8.19"
+          }
+        },
+        "next": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10 ],
+          "attributes": {
+            "src": "src/system.v:9.12-9.16"
+          }
+        },
+        "operand": {
+          "hide_name": 0,
+          "bits": [ "1", 4, 4 ],
+          "attributes": {
+            "src": "src/system.v:10.12-10.19"
+          }
+        },
+        "q": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7 ],
+          "attributes": {
+            "src": "src/system.v:5.18-5.19"
+          }
+        },
+        "reg1.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "reg1 clk",
+            "src": "src/system.v:26.15-31.2|src/register_3bit.v:2.11-2.14"
+          }
+        },
+        "reg1.d": {
+          "hide_name": 0,
+          "bits": [ 8, 9, 10 ],
+          "attributes": {
+            "hdlname": "reg1 d",
+            "src": "src/system.v:26.15-31.2|src/register_3bit.v:4.17-4.18"
+          }
+        },
+        "reg1.q": {
+          "hide_name": 0,
+          "bits": [ 5, 6, 7 ],
+          "attributes": {
+            "hdlname": "reg1 q",
+            "src": "src/system.v:26.15-31.2|src/register_3bit.v:5.22-5.23"
+          }
+        },
+        "reg1.reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "hdlname": "reg1 reset",
+            "src": "src/system.v:26.15-31.2|src/register_3bit.v:3.11-3.16"
+          }
+        },
+        "reset": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "src/system.v:3.11-3.16"
+          }
+        },
+        "up_down": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "src/system.v:4.11-4.18"
+          }
+        }
+      }
+    }
+  }
+}

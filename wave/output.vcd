@@ -1,0 +1,396 @@
+$date
+	Sat Apr 25 23:28:49 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module system_tb $end
+$var wire 3 ! q [2:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$var reg 1 $ up_down $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 3 % q [2:0] $end
+$var wire 1 # reset $end
+$var wire 1 $ up_down $end
+$var wire 3 & operand [2:0] $end
+$var wire 3 ' next [2:0] $end
+$var wire 3 ( current [2:0] $end
+$var wire 1 ) cout $end
+$scope module adder $end
+$var wire 3 * b [2:0] $end
+$var wire 1 + cin $end
+$var wire 3 , sum [2:0] $end
+$var wire 1 ) cout $end
+$var wire 1 - c2 $end
+$var wire 1 . c1 $end
+$var wire 3 / a [2:0] $end
+$scope module fa0 $end
+$var wire 1 0 a $end
+$var wire 1 1 b $end
+$var wire 1 + cin $end
+$var wire 1 . cout $end
+$var wire 1 2 sum $end
+$upscope $end
+$scope module fa1 $end
+$var wire 1 3 a $end
+$var wire 1 4 b $end
+$var wire 1 . cin $end
+$var wire 1 - cout $end
+$var wire 1 5 sum $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 6 a $end
+$var wire 1 7 b $end
+$var wire 1 - cin $end
+$var wire 1 ) cout $end
+$var wire 1 8 sum $end
+$upscope $end
+$upscope $end
+$scope module reg1 $end
+$var wire 1 " clk $end
+$var wire 3 9 d [2:0] $end
+$var wire 1 # reset $end
+$var reg 3 : q [2:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 :
+b1 9
+08
+07
+06
+05
+04
+03
+12
+11
+00
+b0 /
+0.
+0-
+b1 ,
+0+
+b1 *
+0)
+b0 (
+b1 '
+b1 &
+b0 %
+0$
+1#
+0"
+b0 !
+$end
+#5000
+1"
+#10000
+0"
+0#
+#15000
+15
+b10 '
+b10 ,
+b10 9
+02
+1.
+10
+b1 !
+b1 %
+b1 (
+b1 /
+b1 :
+1"
+#20000
+0"
+#25000
+b11 '
+b11 ,
+b11 9
+12
+0.
+13
+00
+b10 !
+b10 %
+b10 (
+b10 /
+b10 :
+1"
+#30000
+0"
+#35000
+18
+1-
+05
+b100 '
+b100 ,
+b100 9
+02
+1.
+10
+b11 !
+b11 %
+b11 (
+b11 /
+b11 :
+1"
+#40000
+0"
+#45000
+0)
+0-
+18
+b101 '
+b101 ,
+b101 9
+12
+0.
+16
+03
+00
+b100 !
+b100 %
+b100 (
+b100 /
+b100 :
+1"
+#50000
+0"
+#55000
+15
+b110 '
+b110 ,
+b110 9
+02
+1.
+10
+b101 !
+b101 %
+b101 (
+b101 /
+b101 :
+1"
+#60000
+0"
+#65000
+b111 '
+b111 ,
+b111 9
+12
+0.
+13
+00
+b110 !
+b110 %
+b110 (
+b110 /
+b110 :
+1"
+#70000
+05
+1-
+b101 '
+b101 ,
+b101 9
+18
+1)
+14
+17
+b111 &
+b111 *
+0"
+1$
+#75000
+b100 '
+b100 ,
+b100 9
+02
+1.
+03
+10
+b101 !
+b101 %
+b101 (
+b101 /
+b101 :
+1"
+#80000
+0"
+#85000
+08
+0-
+15
+b11 '
+b11 ,
+b11 9
+12
+0.
+00
+b100 !
+b100 %
+b100 (
+b100 /
+b100 :
+1"
+#90000
+0"
+#95000
+1-
+b10 '
+b10 ,
+b10 9
+02
+1.
+06
+13
+10
+b11 !
+b11 %
+b11 (
+b11 /
+b11 :
+1"
+#100000
+0"
+#105000
+05
+b1 '
+b1 ,
+b1 9
+12
+0.
+00
+b10 !
+b10 %
+b10 (
+b10 /
+b10 :
+1"
+#110000
+0"
+#115000
+b0 '
+b0 ,
+b0 9
+02
+1.
+03
+10
+b1 !
+b1 %
+b1 (
+b1 /
+b1 :
+1"
+#120000
+0"
+#125000
+0)
+18
+0-
+15
+b111 '
+b111 ,
+b111 9
+12
+0.
+00
+b0 !
+b0 %
+b0 (
+b0 /
+b0 :
+1"
+#130000
+05
+b1 '
+b1 ,
+b1 9
+08
+04
+07
+b1 &
+b1 *
+0"
+0$
+#135000
+15
+b10 '
+b10 ,
+b10 9
+02
+1.
+10
+b1 !
+b1 %
+b1 (
+b1 /
+b1 :
+1"
+#140000
+0"
+#145000
+b11 '
+b11 ,
+b11 9
+12
+0.
+13
+00
+b10 !
+b10 %
+b10 (
+b10 /
+b10 :
+1"
+#150000
+0"
+#155000
+18
+1-
+05
+b100 '
+b100 ,
+b100 9
+02
+1.
+10
+b11 !
+b11 %
+b11 (
+b11 /
+b11 :
+1"
+#160000
+0"
+#165000
+0)
+0-
+18
+b101 '
+b101 ,
+b101 9
+12
+0.
+16
+03
+00
+b100 !
+b100 %
+b100 (
+b100 /
+b100 :
+1"
+#170000
+0"
